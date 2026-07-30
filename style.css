@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.4s ease-in-out;
+}
+
+body{
+    height: 100svh;
+    width: 100svw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url(https://i.pinimg.com/736x/e4/3c/74/e43c74bd5e92d5a601df4f004d9f1a1d.jpg);
+}
+
+.text,.text2{
+    height: 100px;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    span{
+        font-family: monospace;
+        font-weight: 900;
+        font-size: 1.5rem;
+        &:first-of-type{
+            text-align: left;
+            margin-bottom: -10px;
+        }
+        &:nth-of-type(2){
+            text-align: right;
+            margin-top: -10px;
+        }
+    }
+    p{
+        font-size: 4rem;
+        font-weight: 900;
+        font-family: cursive;
+        color: saddlebrown;
+    }
+}
+
+
+.cards{
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    .container{
+        height: 200px;
+        width: 200px;
+        display: flex;
+        perspective: 1000px;
+        .card{
+            position: relative;
+            height: inherit;
+            width: inherit;
+            transform-style: preserve-3d;
+            .front,.back{
+                backface-visibility: hidden;
+                position: absolute;
+                height: inherit;
+                width: inherit;
+                border-radius: 20px;
+            }
+            .front{
+                background: linear-gradient(135deg,silver,tan);
+                /* color: ; */
+                display: flex;
+                justify-content: center;align-items: center;
+                .displayText{
+                    height: 80%;
+                    width: 80%;
+                    border-radius: 50%;
+                    background-color: rgba(245, 245, 245, 0.368);
+                    display: flex;
+                    justify-content: center;align-items: center;
+                    text-align: center;
+                    font-size: 1.5rem;
+                    font-family: cursive;
+                    font-weight: 900;
+                    color: saddlebrown;
+                }
+            }
+            .back{
+                border: 2px solid darkgrey;
+                transform: rotateY(180deg);
+                display: flex;
+                justify-content: center;align-items: center;
+                background-color: rgba(255, 255, 255, 0.619);
+                .display{
+                    height: 75%;
+                    width: 75%;
+                    /* background: linear-gradient(-45deg ,thistle,pink,salmon); */
+                    background-color: rgba(245, 245, 245, 0.644);
+                    border-radius: 30px;
+                    display: flex;
+                    overflow: hidden;
+                    .left{
+                        height: 100%;
+                        width: 20%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        writing-mode: vertical-lr;
+                        text-orientation: upright;
+                        font-size: 1.2rem;
+                        border-right: 2px solid;
+                        font-weight: 900;
+                        font-family: monospace;
+                    }
+                    .content{
+                        width: 80%;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 10px;
+                        font-family: monospace;
+                        svg{
+                            height: 50%;
+                            opacity: .5;
+                        }
+                        p{
+                            font-weight: 500;
+                            font-size: medium;
+                        }
+                        span{
+                            font-size: small;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .active{
+        width: 300px;
+        align-self: center;
+        z-index: 3;
+        .card{
+            transform: rotateY(180deg);
+            .back{
+                corner-shape: scoop;
+                border-radius: 30px;
+            }
+            ::before{
+                /* content: "💕"; */
+                height: 40px;
+                width: 40px;
+                scale: 3;
+                /* corner-shape: scoop; */
+                /* border-radius: 50px;
+                background: linear-gradient(-45deg ,white, gold, yellow, orange); */
+                position: absolute;
+                top: 0px;
+                left: 20px;
+            }
+            ::after{
+                /* content: "💕"; */
+                height: 40px;
+                width: 40px;
+                scale: 2;
+                /* corner-shape: scoop;
+                border-radius: 50px;
+                background: linear-gradient(45deg ,white, gold, yellow, orange); */
+                position: absolute;
+                bottom: -30px;
+                right: -30px;
+            }
+        }
+    }
+    .inactive{
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 600px){
+    .text{
+        max-width: 80%;
+        p{
+            text-align: center;
+            font-size: 3rem;
+        }
+    }
+    .cards{
+        gap: 10px;
+        .container{
+            height: 100px;
+            width: 100px;
+            .card{
+                .front{
+                    .displayText{
+                        font-size: unset;
+                    }
+                }
+                .back{
+                    .display{
+                        border-radius: 20px;
+                        .left{
+                            font-size: .95rem;
+                        }
+                    }
+                }
+            }
+        }
+        .active{
+            height: 150px;
+            width: 250px;
+        }
+    }
+}
