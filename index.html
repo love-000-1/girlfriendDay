@@ -64,7 +64,7 @@
     </div>
     <script>
         function SelectCard(index){
-            localStorage.setItem('index',`${index}`)
+            document.querySelectorAll('.text')[1].innerHTML = "";
             if (![...document.querySelectorAll('.container')[index].classList].includes('active')){
                 document.querySelectorAll('.container')[index].classList.add('active')
                 document.querySelectorAll('.container').forEach((elem,i)=>{
