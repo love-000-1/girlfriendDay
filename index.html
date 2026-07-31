@@ -3,89 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy GirlFirend's Day</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lovers+Quarrel&family=Rubik+Bubbles&display=swap" rel="stylesheet">
 </head>
-<body style="background-position: center;background-size: cover;">
-    <div class="text">
-        <span>Happy</span>
-        <p>Girlfirend</p>
-        <span>Day...</span>
+<body>
+    <div class="intro ">
+        <div class="text rubik-bubbles-regular">Hello Babyyyy</div>
+        <button onclick="UpdateText()">Next</button>
     </div>
-    <div class="text">
-        <span style="color: sienna;">On this Special Ocassion of Girlfirends Day. I would like you to choose a ticket for you... Be careful You have one chance and it may have a best ticket you will love</span>
+    <div class="choices">
+        <div class="head">
+            <span>Some</span>
+            <p>Presents</p>
+            <span>for you...</span>
+        </div>
+        <div class="cards">
+            <div class="container" onclick="Choice1()">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M96 128C60.7 128 32 156.7 32 192L32 256C32 264.8 39.4 271.7 47.7 274.6C66.5 281.1 80 299 80 320C80 341 66.5 358.9 47.7 365.4C39.4 368.3 32 375.2 32 384L32 448C32 483.3 60.7 512 96 512L544 512C579.3 512 608 483.3 608 448L608 384C608 375.2 600.6 368.3 592.3 365.4C573.5 358.9 560 341 560 320C560 299 573.5 281.1 592.3 274.6C600.6 271.7 608 264.8 608 256L608 192C608 156.7 579.3 128 544 128L96 128zM448 400L448 240L192 240L192 400L448 400zM144 224C144 206.3 158.3 192 176 192L464 192C481.7 192 496 206.3 496 224L496 416C496 433.7 481.7 448 464 448L176 448C158.3 448 144 433.7 144 416L144 224z"/></svg>
+            </div>
+            <div class="container" onclick="Choice2()">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M432.5 82.3L382.4 132.4L507.7 257.7L557.8 207.6C579.7 185.7 579.7 150.3 557.8 128.4L511.7 82.3C489.8 60.4 454.4 60.4 432.5 82.3zM343.3 161.2L342.8 161.3L198.7 204.5C178.8 210.5 163 225.7 156.4 245.5L67.8 509.8C64.9 518.5 65.9 528 70.3 535.8L225.7 380.4C224.6 376.4 224.1 372.3 224.1 368C224.1 341.5 245.6 320 272.1 320C298.6 320 320.1 341.5 320.1 368C320.1 394.5 298.6 416 272.1 416C267.8 416 263.6 415.4 259.7 414.4L104.3 569.7C112.1 574.1 121.5 575.1 130.3 572.2L394.6 483.6C414.3 477 429.6 461.2 435.6 441.3L478.8 297.2L478.9 296.7L343.4 161.2z"/></svg>
+            </div>
+            <div class="container" onclick="Choice3()">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M528 320C528 205.1 434.9 112 320 112C205.1 112 112 205.1 112 320C112 434.9 205.1 528 320 528C434.9 528 528 434.9 528 320zM64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576C178.6 576 64 461.4 64 320zM436.2 366.3C448 362.7 459.9 372.4 455.8 384.1C436 440 382.7 480.1 320 480.1C257.3 480.1 204 440.1 184.2 384.2C180.1 372.6 192 362.8 203.8 366.4C238.5 377 278 382.9 319.9 382.9C361.9 382.9 401.4 376.9 436.2 366.3zM240 244C224.5 244 212 256.5 212 272L212 280C212 291 203 300 192 300C181 300 172 291 172 280L172 272C172 234.4 202.4 204 240 204C277.6 204 308 234.4 308 272L308 280C308 291 299 300 288 300C277 300 268 291 268 280L268 272C268 256.5 255.5 244 240 244zM372 272L372 280C372 291 363 300 352 300C341 300 332 291 332 280L332 272C332 234.4 362.4 204 400 204C437.6 204 468 234.4 468 272L468 280C468 291 459 300 448 300C437 300 428 291 428 280L428 272C428 256.5 415.5 244 400 244C384.5 244 372 256.5 372 272z"/></svg>
+            </div>
+        </div>
     </div>
-    <div class="cards">
-        <div class="container" onclick="SelectCard(0)">
-            <div class="card">
-                <div class="front"><div class="displayText">👀 <br> Choose Me</div></div>
-                <div class="back" style="background: url(https://i.pinimg.com/originals/63/7e/da/637eda6ea1b78fe04b89f5b7754a6509.jpg?nii=t);">
-                    <div class="display">
-                        <div class="left">TICKET</div>
-                        <div class="content" >
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" ><path d="M0 320C0 231.6 71.6 160 160 160C210.4 160 257.8 183.7 288 224L320 266.7L352 224C382.2 183.7 429.6 160 480 160C568.4 160 640 231.6 640 320C640 408.4 568.4 480 480 480C429.6 480 382.2 456.3 352 416L320 373.3L288 416C257.8 456.3 210.4 480 160 480C71.6 480 0 408.4 0 320zM280 320L236.8 262.4C218.7 238.2 190.2 224 160 224C107 224 64 267 64 320C64 373 107 416 160 416C190.2 416 218.7 401.8 236.8 377.6L280 320zM360 320L403.2 377.6C421.3 401.8 449.8 416 480 416C533 416 576 373 576 320C576 267 533 224 480 224C449.8 224 421.3 238.2 403.2 262.4L360 320z"/></svg>
-                            <p>UNLIMITED KISSES</p>
-                            <span>Validity: <b>LIFETIME</b></span>
-                        </div>
-                    </div>
+    <div class="tickets">
+        <div class="back" onclick="Back1()">x</div>
+        <div class="head">
+            <p>
+                You Got 3 Tickets
+            </p>
+        </div>
+        <div class="ticket">
+            <div class="display">
+                <div class="left">TICKET</div>
+                <div class="content">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M0 320C0 231.6 71.6 160 160 160C210.4 160 257.8 183.7 288 224L320 266.7L352 224C382.2 183.7 429.6 160 480 160C568.4 160 640 231.6 640 320C640 408.4 568.4 480 480 480C429.6 480 382.2 456.3 352 416L320 373.3L288 416C257.8 456.3 210.4 480 160 480C71.6 480 0 408.4 0 320zM280 320L236.8 262.4C218.7 238.2 190.2 224 160 224C107 224 64 267 64 320C64 373 107 416 160 416C190.2 416 218.7 401.8 236.8 377.6L280 320zM360 320L403.2 377.6C421.3 401.8 449.8 416 480 416C533 416 576 373 576 320C576 267 533 224 480 224C449.8 224 421.3 238.2 403.2 262.4L360 320z"/></svg>
+                    <p>Lovely Kisses</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M386 503.5C356.8 519.1 323.5 528 288 528C173.1 528 80 434.9 80 320C80 205.1 173.2 112 288 112C401.2 112 493.2 202.4 495.9 314.9C510.2 316.4 524.5 320.9 537.8 328.6C539.8 329.8 541.8 331 543.7 332.3C543.9 328.2 544 324.1 544 320C544 178.6 429.4 64 288 64C146.6 64 32 178.6 32 320C32 461.4 146.6 576 288 576C329.4 576 368.5 566.2 403.1 548.7C397.3 535.8 391.1 520.2 385.9 503.5zM256 352C256 360.8 263.2 368 272 368L288 368C296.8 368 304 375.2 304 384C304 392.8 296.8 400 288 400L272 400C263.2 400 256 407.2 256 416C256 424.8 263.2 432 272 432L288 432C296.8 432 304 439.2 304 448C304 456.8 296.8 464 288 464L272 464C263.2 464 256 471.2 256 480C256 488.8 263.2 496 272 496L304 496C330.5 496 352 474.5 352 448C352 435.7 347.4 424.5 339.8 416C347.4 407.5 352 396.3 352 384C352 357.5 330.5 336 304 336L272 336C263.2 336 256 343.2 256 352zM208 304C225.7 304 240 289.7 240 272C240 254.3 225.7 240 208 240C190.3 240 176 254.3 176 272C176 289.7 190.3 304 208 304zM360 260L376 260C387 260 396 269 396 280C396 291 405 300 416 300C427 300 436 291 436 280C436 246.9 409.1 220 376 220L360 220C326.9 220 300 246.9 300 280C300 291 309 300 320 300C331 300 340 291 340 280C340 269 349 260 360 260zM542.8 414C540.6 395.7 529.9 379.4 513.9 370.2C485.8 354 450 363.6 433.8 391.7L431.1 396.3C406.6 438.8 439 514.2 455.5 547.1C460.6 557.2 471 563.2 482.3 562.6C519 560.4 600.5 550.9 625.1 508.4L627.8 503.8C644 475.7 634.4 439.9 606.3 423.7C590.3 414.5 570.9 413.3 553.9 420.6L544.1 424.8L542.8 414.2z"/></svg>
                 </div>
             </div>
         </div>
-        <div class="container" onclick="SelectCard(1)">
-            <div class="card">
-                <div class="front"><div class="displayText">😊 <br> Choose Me</div></div>
-                <div class="back" style="background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuERZu4J2bO_yQW9yjbBpTnFsZCIfJGZr699OiTbnhNzfwoZv4camvFTY&s=10); background-position: center;">
-                    <div class="display">
-                        <div class="left">TICKET</div>
-                        <div class="content">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" ><path d="M0 320C0 231.6 71.6 160 160 160C210.4 160 257.8 183.7 288 224L320 266.7L352 224C382.2 183.7 429.6 160 480 160C568.4 160 640 231.6 640 320C640 408.4 568.4 480 480 480C429.6 480 382.2 456.3 352 416L320 373.3L288 416C257.8 456.3 210.4 480 160 480C71.6 480 0 408.4 0 320zM280 320L236.8 262.4C218.7 238.2 190.2 224 160 224C107 224 64 267 64 320C64 373 107 416 160 416C190.2 416 218.7 401.8 236.8 377.6L280 320zM360 320L403.2 377.6C421.3 401.8 449.8 416 480 416C533 416 576 373 576 320C576 267 533 224 480 224C449.8 224 421.3 238.2 403.2 262.4L360 320z"/></svg>
-                            <p>UNLIMITED HUGS</p>
-                            <span>Validity: <b>LIFETIME</b></span>
-                        </div>
-                    </div>
+        <div class="ticket">
+            <div class="display">
+                <div class="left">TICKET</div>
+                <div class="content">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M0 320C0 231.6 71.6 160 160 160C210.4 160 257.8 183.7 288 224L320 266.7L352 224C382.2 183.7 429.6 160 480 160C568.4 160 640 231.6 640 320C640 408.4 568.4 480 480 480C429.6 480 382.2 456.3 352 416L320 373.3L288 416C257.8 456.3 210.4 480 160 480C71.6 480 0 408.4 0 320zM280 320L236.8 262.4C218.7 238.2 190.2 224 160 224C107 224 64 267 64 320C64 373 107 416 160 416C190.2 416 218.7 401.8 236.8 377.6L280 320zM360 320L403.2 377.6C421.3 401.8 449.8 416 480 416C533 416 576 373 576 320C576 267 533 224 480 224C449.8 224 421.3 238.2 403.2 262.4L360 320z"/></svg>
+                    <p>Comfortable Hugs</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M96 192C96 130.1 146.1 80 208 80C269.9 80 320 130.1 320 192C320 253.9 269.9 304 208 304C146.1 304 96 253.9 96 192zM32 528C32 430.8 110.8 352 208 352C305.2 352 384 430.8 384 528L384 534C384 557.2 365.2 576 342 576L74 576C50.8 576 32 557.2 32 534L32 528zM464 128C517 128 560 171 560 224C560 277 517 320 464 320C411 320 368 277 368 224C368 171 411 128 464 128zM464 368C543.5 368 608 432.5 608 512L608 534.4C608 557.4 589.4 576 566.4 576L421.6 576C428.2 563.5 432 549.2 432 534L432 528C432 476.5 414.6 429.1 385.5 391.3C408.1 376.6 435.1 368 464 368z"/></svg>
                 </div>
             </div>
         </div>
-        <div class="container" onclick="SelectCard(2)">
-            <div class="card">
-                <div class="front"><div class="displayText">🤌 <br> Choose Me</div></div>
-                <div class="back" style="background: url(https://static.vecteezy.com/system/resources/thumbnails/040/139/916/small/ai-generated-generative-ai-frame-of-food-waste-compost-and-soil-environmental-concept-white-background-biodegradable-kitchen-waste-composting-organic-food-photo.jpg);">
-                    <div class="display">
-                        <div class="left">TICKET</div>
-                        <div class="content">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" ><path d="M0 320C0 231.6 71.6 160 160 160C210.4 160 257.8 183.7 288 224L320 266.7L352 224C382.2 183.7 429.6 160 480 160C568.4 160 640 231.6 640 320C640 408.4 568.4 480 480 480C429.6 480 382.2 456.3 352 416L320 373.3L288 416C257.8 456.3 210.4 480 160 480C71.6 480 0 408.4 0 320zM280 320L236.8 262.4C218.7 238.2 190.2 224 160 224C107 224 64 267 64 320C64 373 107 416 160 416C190.2 416 218.7 401.8 236.8 377.6L280 320zM360 320L403.2 377.6C421.3 401.8 449.8 416 480 416C533 416 576 373 576 320C576 267 533 224 480 224C449.8 224 421.3 238.2 403.2 262.4L360 320z"/></svg>
-                            <p>UNLIMITED HANDMADE FOOD</p>
-                            <span>Validity: <b>LIFETIME</b></span>
-                        </div>
-                    </div>
+        <div class="ticket">
+            <div class="display">
+                <div class="left">TICKET</div>
+                <div class="content">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M0 320C0 231.6 71.6 160 160 160C210.4 160 257.8 183.7 288 224L320 266.7L352 224C382.2 183.7 429.6 160 480 160C568.4 160 640 231.6 640 320C640 408.4 568.4 480 480 480C429.6 480 382.2 456.3 352 416L320 373.3L288 416C257.8 456.3 210.4 480 160 480C71.6 480 0 408.4 0 320zM280 320L236.8 262.4C218.7 238.2 190.2 224 160 224C107 224 64 267 64 320C64 373 107 416 160 416C190.2 416 218.7 401.8 236.8 377.6L280 320zM360 320L403.2 377.6C421.3 401.8 449.8 416 480 416C533 416 576 373 576 320C576 267 533 224 480 224C449.8 224 421.3 238.2 403.2 262.4L360 320z"/></svg>
+                    <p>Handmade Food</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><path d="M64 240C64 204.7 92.7 176 128 176C128.5 176 129.1 176 129.6 176C137 139.5 169.3 112 208 112C223 112 237 116.1 248.9 123.2C262.2 97.5 289 80 320 80C351 80 377.8 97.6 391.1 123.2C403.1 116.1 417.1 112 432 112C470.7 112 503 139.5 510.4 176C510.9 176 511.5 176 512 176C547.3 176 576 204.7 576 240C576 251.7 572.9 262.6 567.4 272L72.6 272C67.1 262.6 64 251.7 64 240zM64 347.4C64 332.3 76.3 320 91.4 320L548.5 320C563.6 320 575.9 332.3 575.9 347.4C575.9 417.9 531.5 478.1 469.2 501.5L467.5 516C465.5 532 451.9 544 435.7 544L204.2 544C188.1 544 174.4 532 172.4 516L170.6 501.6C108.4 478.1 64 417.9 64 347.4z"/></svg>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="letter">
+        <div class="back" onclick="Back2()">x</div>
+        <div class="page">
+            <p>Dear Babyyy,</p>
+            <br>
+            <p>From the day you came into my life everyday, everynight, every hour, every minute, every second felt most beautiful part of my life. You gave me the reason to smile everyday. You made me smile with your prsence, even your glimpse was enough for me to smile...</p>
+            <p>You became my safe place in this world full of difficulties, fake faces and fake people... you made me believe that i also can share my feelings to someone who will understand me instead of judging me.</p>
+            <p>Thank you for being with me...</p>
+            <br><br>
+            <span>I love you Babyyy❤️❤️</span>
+            <img src="image.png" alt="">
+        </div>
+    </div>
+    <div class="gifs">
+        <div class="back" onclick="Back3()">x</div>
+        <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcmwwYXdicWN0Z3V2eWVndzZoaGF0OGdwcDhkZGlvYXNmNWYyNjQwaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/vX1C2TejT6OCOz2kLd/giphy.gif" alt="">
+        <p>I Miss you Babyyyy</p>
     </div>
     <script>
-        function SelectCard(index){
-            document.querySelectorAll('.text')[1].innerHTML = "";
-            if (![...document.querySelectorAll('.container')[index].classList].includes('active')){
-                document.querySelectorAll('.container')[index].classList.add('active')
-                document.querySelectorAll('.container').forEach((elem,i)=>{
-                    if (index != i){
-                        elem.classList.add('inactive')
-                    }
-                })
-                document.querySelector('body').style.backgroundPosition ="center";
-                document.querySelector('body').style.backgroundSize ="cover";
-                document.querySelector('body').style.backgroundRepeat ="no-repeat";
-                if (index==0){
-                    document.getElementsByClassName('text')[0].innerHTML = `<span>You Got</span><p style="color: salmon">Kisses</p><span>For LifeTime</span>`
-                    document.querySelector('body').style.backgroundImage="url(https://i.pinimg.com/736x/49/79/da/4979da9c0928289f69fb9f70c753352d.jpg)";
-                }else if (index==1){
-                    document.getElementsByClassName('text')[0].innerHTML = `<span>You Got</span><p style="color:orange">Hugs</p><span>For LifeTime</span>`
-                    document.querySelector('body').style.backgroundImage="url(https://w0.peakpx.com/wallpaper/149/902/HD-wallpaper-couple-hug-awesome-love.jpg)";
-                }else if (index==2){
-                    document.getElementsByClassName('text')[0].innerHTML = `<span style="color: white">You Got</span><p style="color:gold">Food Made by Me</p><span style="color: white">For LifeTime</span>`
-                    document.querySelector('body').style.backgroundImage="url(https://t4.ftcdn.net/jpg/02/92/20/37/360_F_292203735_CSsyqyS6A4Z9Czd4Msf7qZEhoxjpzZl1.jpg)";
-                }
+        let index = 0
+        const messages = [
+        "Happy GirlFriend Day to my sweet girl",
+        "I have something for you",
+        "Let's Go...."
+        ]
+        function UpdateText(){
+            if (index >= 2){
+                document.querySelector('.intro').style.scale = 0;
+                document.querySelector('.choices').style.transform = "translateY(-100%)";
+                document.querySelector('.choices').style.display = "flex";
             }
+            document.querySelector('.text').innerHTML = messages[index++]
+        }
+        function Choice1(){
+            document.querySelector('.choices').style.transform = "translateX(-100%) translateY(-100%)";
+            document.querySelector('.tickets').style.transform = "translateX(0) translateY(-100%)"
+        }
+        function Back1(){
+            document.querySelector('.choices').style.transform = "translateX(0%) translateY(-100%)";
+            document.querySelector('.tickets').style.transform = "translateX(100%) translateY(-100%)"
+        }
+        function Choice2(){
+            document.querySelector('.choices').style.transform = "translateX(0%) translateY(-200%)";
+            document.querySelector('.letter').style.transform = "translateX(0) translateY(-200%)"
+        }
+        function Back2(){
+            document.querySelector('.choices').style.transform = "translateX(0%) translateY(-100%)";
+            document.querySelector('.letter').style.transform = "translateX(0) translateY(-100%)"
+        }
+        function Choice3(){
+            document.querySelector('.choices').style.transform = "translateX(100%) translateY(-100%)";
+            document.querySelector('.gifs').style.transform = "translateX(0) translateY(-300%)"
+        }
+        function Back3(){
+            document.querySelector('.choices').style.transform = "translateX(0%) translateY(-100%)";
+            document.querySelector('.gifs').style.transform = "translateX(-100%) translateY(-300%)"
         }
     </script>
 </body>
